@@ -13,7 +13,7 @@ import (
 	"strings"
 )
 
-func (r Route) SSO(c *gin.Context) {
+func (r Route) sso(c *gin.Context) {
 	var payload model.Login
 
 	if err := c.ShouldBind(&payload); err != nil {

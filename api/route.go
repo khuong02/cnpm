@@ -16,6 +16,17 @@ type Route struct {
 func (r Route) Run() {
 	ginR := gin.Default()
 
-	ginR.POST("/api/sso", r.SSO)
+	// User
+	ginR.POST("/api/sso", r.sso)
+
+	// booking
+	ginR.POST("/api/booking", r.booking)
+
+	// center
+	ginR.GET("/api/center/:id", r.getByID)
+	ginR.GET("/api/centers", r.list)
+	ginR.POST("/api/centers", r.insert)
+	ginR.PUT("/api/centers/:id", r.update)
+
 	ginR.Run(":8080")
 }
