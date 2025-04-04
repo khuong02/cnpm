@@ -1,4 +1,4 @@
-# CNPM Service Guile
+# CNPM Service Guide
 
 ---
 
